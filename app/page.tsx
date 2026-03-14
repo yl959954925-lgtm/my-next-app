@@ -24,7 +24,7 @@ export default function LoginPage() {
         }
 
         try {
-            const rsp = await fetch('http://120.26.40.125:8084/login', {
+            const rsp = await fetch('/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
