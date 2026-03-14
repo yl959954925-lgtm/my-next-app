@@ -66,7 +66,7 @@ export default function DashboardPage() {
 
         if (!jwt || !rawToken) return
         try {
-            const rsp = await fetch('http://120.26.40.125:8084/left_quota', {
+            const rsp = await fetch('/api/proxy/left_quota', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -134,7 +134,7 @@ export default function DashboardPage() {
             setMsg('正在申请上传地址...')
             setProgress(10)
 
-            const uploadUrlRsp = await fetch('http://120.26.40.125:8084/get_upload_url', {
+            const uploadUrlRsp = await fetch('/api/proxy/get_upload_url', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -196,7 +196,7 @@ export default function DashboardPage() {
             setMsg('正在提交任务...')
             setProgress(45)
 
-            const pushRsp = await fetch('http://120.26.40.125:8084/push_to_worker', {
+            const pushRsp = await fetch('/api/proxy/push_to_worker', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -267,7 +267,7 @@ export default function DashboardPage() {
         for (let i = 0; i < maxTimes; i++) {
             await sleep(2000)
 
-            const rsp = await fetch('http://120.26.40.125:8084/query_job_id', {
+            const rsp = await fetch('/api/proxy/query_job_id', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

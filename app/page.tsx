@@ -24,7 +24,7 @@ export default function LoginPage() {
         }
 
         try {
-            const rsp = await fetch('/api/login', {
+            const rsp = await fetch('/api/proxy/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
