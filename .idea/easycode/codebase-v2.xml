@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="com.obiscr.chatgpt.settings.EasyCodeState">
+    <option name="projectFiles" value="$PROJECT_DIR$/app/api/proxy/[...path]/route.ts;C:/Users/Administrator/Desktop/next_js_demo/my-next-app/app/dashboard/page.tsx;C:/Users/Administrator/Desktop/next_js_demo/my-next-app/app/globals.css;C:/Users/Administrator/Desktop/next_js_demo/my-next-app/app/layout.tsx;C:/Users/Administrator/Desktop/next_js_demo/my-next-app/app/page.tsx;C:/Users/Administrator/Desktop/next_js_demo/my-next-app/next.config.ts;C:/Users/Administrator/Desktop/next_js_demo/my-next-app/package-lock.json;C:/Users/Administrator/Desktop/next_js_demo/my-next-app/package.json;C:/Users/Administrator/Desktop/next_js_demo/my-next-app/README.md;C:/Users/Administrator/Desktop/next_js_demo/my-next-app/tsconfig.json" />
+  </component>
+</project>

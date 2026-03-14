@@ -127,7 +127,7 @@ export default function DashboardPage() {
         setOriginPreviewUrl(localUrl)
 
         const jobId = makeJobId(file)
-        const classType = '去水印_保留文字_变清晰'
+        const classType = '强力模式_去除所有水印文字logo'
 
         try {
             setUploading(true)
