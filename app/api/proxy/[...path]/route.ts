@@ -12,6 +12,10 @@ async function handleRequest(
     const targetUrl = `${BACKEND_BASE}/${targetPath}`;
 
     const contentType = req.headers.get("content-type") || "";
+    const token = req.headers.get("token") || "";
+    const authorization = req.headers.get("authorization") || "";
+    const cid = req.headers.get("cid") || "";
+
     let body: BodyInit | undefined = undefined;
 
     if (req.method !== "GET" && req.method !== "HEAD") {
@@ -23,9 +27,16 @@ async function handleRequest(
       }
     }
 
+    const headers: Record<string, string> = {};
+
+    if (contentType) headers["Content-Type"] = contentType;
+    if (token) headers["token"] = token;
+    if (authorization) headers["Authorization"] = authorization;
+    if (cid) headers["cid"] = cid;
+
     const res = await fetch(targetUrl, {
       method: req.method,
-      headers: contentType ? { "Content-Type": contentType } : {},
+      headers,
       body,
       cache: "no-store",
     });
